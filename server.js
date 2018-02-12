@@ -1,15 +1,7 @@
 const { createServer } = require('http')
 const { parse } = require('url')
-
-let next
-
-try {
-  next = require('next')
-} catch (e) {
-  console.log(`No module 'next' found, using parent-require (dev mode)`)
-  const prequire = require('parent-require')
-  next = prequire('next')
-}
+const path = require('path')
+const next = require(path.join(process.cwd(), 'node_modules/next'))
 
 const port = parseInt(process.env.PORT, 10) || 3000
 const dev = process.env.NODE_ENV !== 'production'
