@@ -8,14 +8,17 @@
   "homepage": "https://github.com/onready/next-pkg",
   "files": [
     "bin",
-    "index.js",
-    "server.js"
+    "lib"
   ],
   "bin": {
     "next-pkg": "bin/next-pkg"
   },
+  "dependencies": {
+    "fs-extra": "5.0.0"
+  },
   "peerDependencies": {
     "next": "^5.0.0",
+    "pkg": "^4.3.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
   }
