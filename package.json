@@ -17,13 +17,13 @@
     "test": "standard"
   },
   "dependencies": {
-    "fs-extra": "5.0.0",
+    "fs-extra": "5.0.0"
+  },
+  "devDependencies": {
     "standard": "10.0.3"
   },
   "peerDependencies": {
     "next": "^5.0.0",
-    "pkg": "^4.3.0",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "pkg": "^4.3.0"
   }
 }
