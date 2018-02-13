@@ -13,8 +13,12 @@
   "bin": {
     "next-pkg": "bin/next-pkg"
   },
+  "scripts": {
+    "test": "standard"
+  },
   "dependencies": {
-    "fs-extra": "5.0.0"
+    "fs-extra": "5.0.0",
+    "standard": "10.0.3"
   },
   "peerDependencies": {
     "next": "^5.0.0",
