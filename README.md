@@ -8,6 +8,8 @@ Next-Pkg is a package for compiling your [next.js](https://github.com/zeit/next.
 
 ## Usage
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/onready/next-pkg.svg)](https://greenkeeper.io/)
+
 ```bash
 cd my-next-js-project/
 npm install --save next-pkg pkg
