@@ -20,7 +20,7 @@
     "fs-extra": "5.0.0"
   },
   "devDependencies": {
-    "standard": "10.0.3"
+    "standard": "11.0.0"
   },
   "peerDependencies": {
     "next": "^5.0.0",
