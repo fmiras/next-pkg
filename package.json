@@ -11,16 +11,23 @@
     "lib"
   ],
   "bin": {
-    "next-pkg": "bin/next-pkg"
+    "next-pkg": "bin/next-pkg.js"
+  },
+  "xo": {
+    "extends": "prettier",
+    "rules": {
+      "import/no-unresolved": 0
+    }
   },
   "scripts": {
-    "test": "standard"
+    "test": "xo"
   },
   "dependencies": {
     "fs-extra": "5.0.0"
   },
   "devDependencies": {
-    "standard": "11.0.0"
+    "prettier": "1.11.1",
+    "xo": "0.20.3"
   },
   "peerDependencies": {
     "next": "^5.0.0",

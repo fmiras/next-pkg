@@ -1,7 +1,8 @@
 #!/usr/bin/env node
-const { copy, remove } = require('fs-extra')
 const { join } = require('path')
+const { copy, remove } = require('fs-extra')
 const { exec } = require('pkg')
+
 const pkg = require(join(process.cwd(), 'package.json'))
 
 const finalServerPath = join(process.cwd(), '.next-pkg/server.js')

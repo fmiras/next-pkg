@@ -1,0 +1,4 @@
+* text=auto
+*.js text eol=lf
+bin/* text eol=lf
+*.ai binary
