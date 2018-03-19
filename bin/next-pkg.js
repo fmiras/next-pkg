@@ -1,39 +1,59 @@
 #!/usr/bin/env node
-const { join } = require('path')
+const { resolve } = require('path')
+const ora = require('ora')
 const { copy, remove } = require('fs-extra')
 const { exec } = require('pkg')
 
-const pkg = require(join(process.cwd(), 'package.json'))
+const pkg = require(resolve(process.cwd(), 'package.json'))
 
-const finalServerPath = join(process.cwd(), '.next-pkg/server.js')
-const binaryFilePath = process.platform === 'win32'
-  ? `dist/${pkg.name}.exe`
-  : `dist/${pkg.name}`
-
-const deleteTmpFiles = async () => {
-  console.log('Deleting temporary files...')
-  try {
-    await remove('.next-pkg')
-  } catch (e) {
-    console.log(`Error deleting temporary files: ${e}`)
-  }
-}
+const finalServerPath = resolve(process.cwd(), '.next-pkg/server.js')
+const binaryFilePath =
+  process.platform === 'win32' ? `dist/${pkg.name}.exe` : `dist/${pkg.name}`
 
 const copyTmpFiles = async () => {
-  console.log('Copying extended next-pkg server...')
+  const spinner = ora('Copying extended next-pkg server').start()
   try {
-    await copy(join(__dirname, '../lib/server.js'), finalServerPath)
+    await copy(resolve(__dirname, '../lib/server.js'), finalServerPath)
+    spinner.succeed()
   } catch (e) {
     console.log(`Error copying temporary files: ${e}`)
+    spinner.fail()
+    throw e
   }
 }
 
 const compile = async () => {
-  console.log('Compiling server with pkg...')
+  const spinner = ora('Compiling server with pkg').start()
   try {
-    await exec([ finalServerPath, '--target', 'host', '--output', `${binaryFilePath}` ])
+    const execution = exec([
+      finalServerPath,
+      '--target',
+      'host',
+      '--output',
+      `${binaryFilePath}`
+    ])
+    spinner.stop()
+    process.stderr.moveCursor(0, -1)
+    process.stderr.clearLine()
+    spinner.start()
+    await execution
+    spinner.succeed()
   } catch (e) {
     console.log(`Error during pkg compiling process: ${e}`)
+    spinner.fail()
+    throw e
+  }
+}
+
+const deleteTmpFiles = async () => {
+  const spinner = ora('Deleting temporary files').start()
+  try {
+    await remove('.next-pkg')
+    spinner.succeed()
+  } catch (e) {
+    console.log(`Error deleting temporary files: ${e}`)
+    spinner.fail()
+    throw e
   }
 }
 
@@ -41,7 +61,7 @@ const cli = async () => {
   await copyTmpFiles()
   await compile()
   await deleteTmpFiles()
-  console.log(`Binary compiled at ${binaryFilePath}`)
+  console.log(`📦 Binary compiled at ${binaryFilePath}`)
 }
 
 cli()
