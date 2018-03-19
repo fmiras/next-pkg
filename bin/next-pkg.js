@@ -14,10 +14,9 @@ const copyTmpFiles = async () => {
   const spinner = ora('Copying extended next-pkg server').start()
   try {
     await copy(resolve(__dirname, '../lib/server.js'), finalServerPath)
-    spinner.succeed()
+    spinner.succeed('Extended next-pkg server copied')
   } catch (e) {
-    console.log(`Error copying temporary files: ${e}`)
-    spinner.fail()
+    spinner.fail(`Error copying temporary files: ${e}`)
     throw e
   }
 }
@@ -37,10 +36,9 @@ const compile = async () => {
     process.stderr.clearLine()
     spinner.start()
     await execution
-    spinner.succeed()
+    spinner.succeed(`Server compiled`)
   } catch (e) {
-    console.log(`Error during pkg compiling process: ${e}`)
-    spinner.fail()
+    spinner.fail(`Error during pkg compiling process: ${e}`)
     throw e
   }
 }
@@ -49,10 +47,9 @@ const deleteTmpFiles = async () => {
   const spinner = ora('Deleting temporary files').start()
   try {
     await remove('.next-pkg')
-    spinner.succeed()
+    spinner.succeed('Temporary files deleted')
   } catch (e) {
-    console.log(`Error deleting temporary files: ${e}`)
-    spinner.fail()
+    spinner.fail(`Error deleting temporary files: ${e}`)
     throw e
   }
 }
