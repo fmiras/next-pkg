@@ -1,6 +1,6 @@
 {
   "name": "next-pkg",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Extended Next.js server with pkg support",
   "license": "MIT",
   "repository": "onready/next-pkg",
