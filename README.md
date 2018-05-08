@@ -1,4 +1,4 @@
-![img](https://i.imgur.com/tLIHL2S.png)
+![img](https://imgur.com/tsfURMV.png)
 
 [![NPM version](https://img.shields.io/npm/v/next-pkg.svg)](https://www.npmjs.com/package/next-pkg)
 [![Build Status](https://travis-ci.org/onready/next-pkg.svg?branch=master)](https://travis-ci.org/onready/next-pkg)
