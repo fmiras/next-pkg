@@ -1,4 +1,5 @@
-![img](https://fmiras.com/img/oss/next-pkg.png)
+![img](https://i.imgur.com/tLIHL2S.png)
+
 [![NPM version](https://img.shields.io/npm/v/next-pkg.svg)](https://www.npmjs.com/package/next-pkg)
 [![Build Status](https://travis-ci.org/onready/next-pkg.svg?branch=master)](https://travis-ci.org/onready/next-pkg)
 [![Standard - JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://github.com/standard/standard)
