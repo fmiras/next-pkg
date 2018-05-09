@@ -31,7 +31,7 @@
     ]
   },
   "dependencies": {
-    "fs-extra": "6.0.0",
+    "fs-extra": "6.0.1",
     "ora": "2.0.0"
   },
   "devDependencies": {
