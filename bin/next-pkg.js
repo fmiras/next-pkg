@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 const { resolve } = require('path')
+const readline = require('readline')
 const ora = require('ora')
 const { copy, remove } = require('fs-extra')
 const { exec } = require('pkg')
@@ -15,9 +16,9 @@ const copyTmpFiles = async () => {
   try {
     await copy(resolve(__dirname, '../lib/server.js'), finalServerPath)
     spinner.succeed('Extended next-pkg server copied')
-  } catch (e) {
-    spinner.fail(`Error copying temporary files: ${e}`)
-    throw e
+  } catch (error) {
+    spinner.fail(`Error copying temporary files: ${error}`)
+    throw error
   }
 }
 
@@ -32,14 +33,14 @@ const compile = async () => {
       `${binaryFilePath}`
     ])
     spinner.stop()
-    process.stderr.moveCursor(0, -1)
-    process.stderr.clearLine()
+    readline.moveCursor(process.stderr, 0, -1)
+    readline.clearLine(process.stderr)
     spinner.start()
     await execution
     spinner.succeed(`Server compiled`)
-  } catch (e) {
-    spinner.fail(`Error during pkg compiling process: ${e}`)
-    throw e
+  } catch (error) {
+    spinner.fail(`Error during pkg compiling process: ${error}`)
+    throw error
   }
 }
 
@@ -48,9 +49,9 @@ const deleteTmpFiles = async () => {
   try {
     await remove('.next-pkg')
     spinner.succeed('Temporary files deleted')
-  } catch (e) {
-    spinner.fail(`Error deleting temporary files: ${e}`)
-    throw e
+  } catch (error) {
+    spinner.fail(`Error deleting temporary files: ${error}`)
+    throw error
   }
 }
 
