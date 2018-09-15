@@ -3,9 +3,9 @@
   "version": "1.0.4",
   "description": "Extended Next.js server with pkg support",
   "license": "MIT",
-  "repository": "onready/next-pkg",
-  "bugs": "https://github.com/onready/next-pkg/issues",
-  "homepage": "https://github.com/onready/next-pkg",
+  "repository": "fmiras/next-pkg",
+  "bugs": "https://github.com/fmiras/next-pkg/issues",
+  "homepage": "https://github.com/fmiras/next-pkg",
   "files": [
     "bin",
     "lib"
