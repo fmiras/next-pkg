@@ -1,10 +1,10 @@
 ![img](https://imgur.com/tsfURMV.png)
 
 [![NPM version](https://img.shields.io/npm/v/next-pkg.svg)](https://www.npmjs.com/package/next-pkg)
-[![Build Status](https://travis-ci.org/onready/next-pkg.svg?branch=master)](https://travis-ci.org/onready/next-pkg)
+[![Build Status](https://travis-ci.org/fmiras/next-pkg.svg?branch=master)](https://travis-ci.org/fmiras/next-pkg)
 [![Standard - JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://github.com/standard/standard)
 [![Join the community on Spectrum](https://withspectrum.github.io/badge/badge.svg)](https://spectrum.chat/next-js)
-[![Greenkeeper badge](https://badges.greenkeeper.io/onready/next-pkg.svg)](https://greenkeeper.io/)
+[![Greenkeeper badge](https://badges.greenkeeper.io/fmiras/next-pkg.svg)](https://greenkeeper.io/)
 
 Next-Pkg is a package for compiling your [next.js](https://github.com/zeit/next.js) project with [pkg](https://github.com/zeit/pkg). This is how you can deploy your Next.js apps on enviroments without node installed! (And take advantage of all the other pkg features)
 
