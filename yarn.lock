@@ -1193,9 +1193,9 @@ hosted-git-info@^2.1.4:
   version "2.7.1"
   resolved "https://registry.yarnpkg.com/hosted-git-info/-/hosted-git-info-2.7.1.tgz#97f236977bd6e125408930ff6de3eec6281ec047"
 
-husky@1.1.2:
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/husky/-/husky-1.1.2.tgz#574c2bb16958db8a8120b63306efaff110525c23"
+husky@1.1.3:
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/husky/-/husky-1.1.3.tgz#3ccfdb4d7332896bf7cd0e618c6fb8be09d9de4b"
   dependencies:
     cosmiconfig "^5.0.6"
     execa "^0.9.0"
@@ -2222,9 +2222,9 @@ prepend-http@^1.0.1:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/prepend-http/-/prepend-http-1.0.4.tgz#d4f4562b0ce3696e41ac52d0e002e57a635dc6dc"
 
-prettier@1.14.3, prettier@^1.12.1:
-  version "1.14.3"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.14.3.tgz#90238dd4c0684b7edce5f83b0fb7328e48bd0895"
+prettier@1.15.1, prettier@^1.12.1:
+  version "1.15.1"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.15.1.tgz#06c67106afb1b40e74b002353b2079cc7e0e67bf"
 
 pretty-format@^23.6.0:
   version "23.6.0"
