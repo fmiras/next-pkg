@@ -2,6 +2,7 @@
 
 [![NPM version](https://img.shields.io/npm/v/next-pkg.svg)](https://www.npmjs.com/package/next-pkg)
 [![Build Status](https://travis-ci.org/fmiras/next-pkg.svg?branch=master)](https://travis-ci.org/fmiras/next-pkg)
+[![Dependabot](https://badgen.net/badge/Dependabot/enabled/green?icon=dependabot)](https://dependabot.com/)
 [![Standard - JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://github.com/standard/standard)
 [![Join the community on Spectrum](https://withspectrum.github.io/badge/badge.svg)](https://spectrum.chat/next-js)
 
