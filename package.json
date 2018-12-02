@@ -7,11 +7,11 @@
   "bugs": "https://github.com/fmiras/next-pkg/issues",
   "homepage": "https://github.com/fmiras/next-pkg",
   "files": [
-    "bin",
-    "lib"
+    "dist",
+    "bin"
   ],
   "bin": {
-    "next-pkg": "bin/next-pkg.js"
+    "next-pkg": "bin/cli.js"
   },
   "xo": {
     "extends": "prettier",
@@ -20,6 +20,7 @@
     }
   },
   "scripts": {
+    "build": "ncc build lib/next-pkg.js && ncc build lib/server.js --out dist/server",
     "test": "xo",
     "precommit": "lint-staged"
   },
@@ -30,15 +31,11 @@
       "git add"
     ]
   },
-  "dependencies": {
-    "fs-extra": "7.0.1",
-    "ora": "3.0.0"
-  },
   "devDependencies": {
-    "husky": "1.1.2",
-    "prettier": "1.14.3",
+    "fs-extra": "7.0.1",
     "husky": "1.2.0",
     "lint-staged": "8.1.0",
+    "ora": "3.0.0",
     "prettier": "1.15.3",
     "xo": "0.23.0"
   },
