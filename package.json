@@ -16,7 +16,8 @@
   "xo": {
     "extends": "prettier",
     "rules": {
-      "import/no-unresolved": 0
+      "import/no-unresolved": 0,
+      "import/no-unassigned-import": 0
     }
   },
   "scripts": {
