@@ -33,7 +33,7 @@
     ]
   },
   "devDependencies": {
-    "@zeit/ncc": "0.5.5",
+    "@zeit/ncc": "0.6.0",
     "fs-extra": "7.0.1",
     "husky": "1.2.1",
     "lint-staged": "8.1.0",
